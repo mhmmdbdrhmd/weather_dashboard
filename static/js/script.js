@@ -27,11 +27,11 @@ function fetchWeather(latitude, longitude, type) {
             var customPercentage = data.current_weather.winddirection; // Your custom percentage from JavaScript
 
             document.getElementById('weatherIconNow').addEventListener('mouseover', function () {
-                this.style.transform = 'rotate( ' + ( 360 - customPercentage )+ 'deg)';
+                this.style.transform = 'rotate( ' + ( customPercentage )+ 'deg)';
             });
 
             document.getElementById('weatherIconNow').addEventListener('mouseout', function () {
-                this.style.transform = 'rotate(0deg)'; // Reset to the initial rotation value on mouseout
+                this.style.transform = 'rotate(90deg)'; // Reset to the initial rotation value on mouseout
 });
 
         })

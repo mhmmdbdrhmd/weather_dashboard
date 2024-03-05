@@ -275,6 +275,7 @@ h1{
 #weatherIconNow {
     width: 95%; /* Adjust the size as needed */
     height: auto; /* Maintain aspect ratio */
+    transform: rotate(90deg);
 }
 
 #weatherIconblue {
