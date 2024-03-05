@@ -49,7 +49,7 @@ function initializeAutoMap(lat, lon) {
         attribution: '© OpenStreetMap contributors'
     }).addTo(autoMap);
     L.marker([lat, lon]).addTo(autoMap)
-        .bindPopup('Your location').openPopup();
+        .openPopup();
 }
 
 // Function to initialize map based on manual input
