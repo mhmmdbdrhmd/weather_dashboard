@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', function() {
         .then(data => {
 
             const locNameElement = document.getElementsByClassName("locName");
-            locNameElement[0].innerHTML = `tes ${data.city}`;
+            locNameElement[0].innerHTML = `${data.city}`;
             locNameElement[0].style.display = 'block';
 
 
