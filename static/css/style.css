@@ -290,6 +290,9 @@ h1{
 #windSpeed:hover {
     transform: rotate(0deg); /* Initial rotation value */
 }
-#autoMap:hover {
-zindex: 50;
+#autoWeatherSection:hover {
+    z-index: 50;
+}
+#autoWeatherSection {
+    z-index: 50;
 }
