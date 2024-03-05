@@ -5,30 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather Dashboard</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-    <style>
-        #map { height: 400px; width: 100%; }
-        .container { text-align: center; margin-top: 20px; }
-        #weatherDisplay, #manualWeatherDisplay { margin-top: 20px; padding: 10px; border: 1px solid #ddd; display: none; }
-    </style>
+
+    <link rel="stylesheet" href="../static/css/style.css">
 </head>
 <body>
     <div class="container">
-        <h1>Weather Dashboard</h1>
+
+        <div class="mainTemp">
+            <h2 class="locName">Ahmad Abad</h2>
+            <h5 id="stylenew">winddirection is loading ...</h5>
+            <h5 class="iconDesc">Your are Here ...</h5>
+            <img id="locIcon" src="../static/src/img/Location Icon.png" alt="">
+            <div id="temp">
+                <h1 id="weatherDisplay">00</h1>
+            </div>
+            <h5 id="deg">°C</h5>
+        </div>
+
         <div id="autoWeatherSection">
-            <h2>My Location's Weather</h2>
-            <div id="weatherDisplay">Fetching your weather...</div>
-            <div id="autoMap" style="height: 400px; width: 100%;"></div>
+            <div id="autoMap"></div>
         </div>
-        <div id="manualInputSection">
-            <h2>Check Weather Elsewhere</h2>
-            <form id="manualLocationForm">
-                <input type="text" id="latitude" placeholder="Latitude" required>
-                <input type="text" id="longitude" placeholder="Longitude" required>
-                <button type="submit">Get Weather</button>
-            </form>
-            <div id="manualWeatherDisplay">Weather information will be displayed here.</div>
-            <div id="manualMap" style="height: 400px; width: 100%;"></div>
+
+        <div id="weatherIcon">
+            <img src="/static/src/img/clouds.png" alt="" >
+            
+            <div id="windSpeed" >
+                <h3 id="windIconNow">00</h3>
+                <h1 id="WindUnitNow">oo</h1>
+                <img id="weatherIconblue"id="" src="../static/src/img/wind blue.png" alt="" >
+                <img id="weatherIconNow" src="../static/src/img/wind blue arrow.png" alt="" >
+                
+            </div>
         </div>
+
     </div>
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
     <script src="static/js/script.js"></script>

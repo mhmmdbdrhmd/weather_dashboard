@@ -1,15 +1,46 @@
+
+
+
 function fetchWeather(latitude, longitude, type) {
     const weatherApiUrl = `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&current_weather=true`;
     fetch(weatherApiUrl)
         .then(response => response.json())
         .then(data => {
             const displayElement = type === 'auto' ? document.getElementById('weatherDisplay') : document.getElementById('manualWeatherDisplay');
-            displayElement.innerHTML = `Current Temperature: ${data.current_weather.temperature}°C`;
+            const windSpeedElement = document.getElementById('windIconNow');
+            const windUnitElement = document.getElementById('WindUnitNow');
+            const winddirectionElement = document.getElementById('stylenew');
+            
+
+            displayElement.innerHTML = `${data.current_weather.temperature}`;
             displayElement.style.display = 'block';
+
+            windSpeedElement.innerHTML = `${data.current_weather.windspeed}`;
+            windSpeedElement.style.display = 'block';
+
+            windUnitElement.innerHTML = `${data.current_weather_units.windspeed}`;
+            windUnitElement.style.display = 'block';
+
+            winddirectionElement.innerHTML = `winddirection : ${data.current_weather.winddirection} °`;
+            winddirectionElement.style.display = 'block';
+
+            var customPercentage = data.current_weather.winddirection; // Your custom percentage from JavaScript
+
+            document.getElementById('weatherIconNow').addEventListener('mouseover', function () {
+                this.style.transform = 'rotate( ' + ( 360 - customPercentage )+ 'deg)';
+            });
+
+            document.getElementById('weatherIconNow').addEventListener('mouseout', function () {
+                this.style.transform = 'rotate(0deg)'; // Reset to the initial rotation value on mouseout
+});
+
         })
         .catch(error => console.error('Error fetching weather data:', error));
 }
 // Assuming fetchWeather() and other necessary functions remain unchanged
+
+
+
 
 // Function to initialize map automatically
 function initializeAutoMap(lat, lon) {
@@ -36,8 +67,17 @@ document.addEventListener('DOMContentLoaded', function() {
     fetch('https://ipapi.co/json/')
         .then(response => response.json())
         .then(data => {
+
+            const locNameElement = document.getElementsByClassName("locName");
+            locNameElement.innerHTML = `tes ${data.city}`;
+            locNameElement.style.display = 'block';
+
+
             fetchWeather(data.latitude, data.longitude, 'auto');
             initializeAutoMap(data.latitude, data.longitude); // Use auto map init function
+
+            
+
         })
         .catch(error => {
             console.log("Error: ", error);
