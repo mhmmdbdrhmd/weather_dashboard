@@ -4,19 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather Dashboard</title>
-    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <style>
+        #map { height: 400px; width: 100%; }
+        .container { text-align: center; margin-top: 20px; }
+        #weatherDisplay, #manualWeatherDisplay { margin-top: 20px; padding: 10px; border: 1px solid #ddd; display: none; }
+    </style>
 </head>
 <body>
     <div class="container">
         <h1>Weather Dashboard</h1>
-        <button id="autoLocationBtn">Use My Location</button>
-        <form id="manualLocationForm">
-            <input type="text" id="latitude" placeholder="Latitude" required>
-            <input type="text" id="longitude" placeholder="Longitude" required>
-            <button type="submit">Get Weather</button>
-        </form>
-        <div id="weatherDisplay">Weather information will be displayed here.</div>
+        <div id="autoWeatherSection">
+            <h2>My Location's Weather</h2>
+            <div id="weatherDisplay">Fetching your weather...</div>
+            <div id="autoMap" style="height: 400px; width: 100%;"></div>
+        </div>
+        <div id="manualInputSection">
+            <h2>Check Weather Elsewhere</h2>
+            <form id="manualLocationForm">
+                <input type="text" id="latitude" placeholder="Latitude" required>
+                <input type="text" id="longitude" placeholder="Longitude" required>
+                <button type="submit">Get Weather</button>
+            </form>
+            <div id="manualWeatherDisplay">Weather information will be displayed here.</div>
+            <div id="manualMap" style="height: 400px; width: 100%;"></div>
+        </div>
     </div>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
     <script src="static/js/script.js"></script>
 </body>
 </html>
