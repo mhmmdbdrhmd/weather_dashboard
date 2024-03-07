@@ -9,6 +9,8 @@
 </p>
 
 
+<iframe width="1920" height="1080" src="https://xd.adobe.com/embed/96b6e5b8-30ca-4e40-964e-a1de6fc4559e-c3e5/" frameborder="0" allowfullscreen sandbox="allow-same-origin allow-scripts allow-pointer-lock allow-forms"></iframe>
+
 
 A dynamic and interactive web application designed to provide personalized weather information based on the user's location. Leveraging client-based APIs for geolocation, mapping, and weather data retrieval, the Weather Dashboard offers a comprehensive and visually engaging overview of current weather conditions. 🌍🗺️☀️
 
