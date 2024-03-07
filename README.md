@@ -1,4 +1,14 @@
-# Weather Dashboard 🌤️
+
+# 
+<h1 align="center">🌤️ Weather Dashboard 🌤️</h1>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Version-1.0.0-blue.svg" alt="Version 1.0.0">
+  <img src="https://img.shields.io/badge/Maintained%3F-yes-green.svg" alt="Maintained? yes">
+  <img src="https://img.shields.io/badge/Made%20with-Python-1f425f.svg" alt="Made with Python">
+  <img src="https://img.shields.io/badge/Contributions-welcome-orange.svg" alt="Contributions welcome">
+</p>
+
 
 A dynamic and interactive web application designed to provide personalized weather information based on the user's location. Leveraging client-based APIs for geolocation, mapping, and weather data retrieval, the Weather Dashboard offers a comprehensive and visually engaging overview of current weather conditions. 🌍🗺️☀️
 
