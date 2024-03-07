@@ -48,9 +48,21 @@ pip install -r requirements.txt
 
 After installing the required libraries with the command above, you can start the application by running:
 
-```bash
-python app.py
-```
+1. Clone the repository using SSH:
+   ```sh
+   git clone git@github.com:mhmmdbdrhmd/weather_dashboard.git
+   ```
+
+2. Navigate to the script directory.
+   ```sh
+   cd weather_dashboard
+   ```
+4. Run the script:
+  ```sh
+  python app.py
+  ```
+
+
 
 The application will start, and you should see a message indicating it's running, typically with a link to `http://127.0.0.1:5000/` or `http://localhost:5000/`. Open this link in your web browser to view the Weather Dashboard. No API key is needed to use this application, as it relies on client-side APIs for functionality.
 
