@@ -37,9 +37,9 @@ The UI/UX of the Weather Dashboard is designed to prioritize user engagement and
 
 Before running the Weather Dashboard application, ensure you have Python installed on your system. Then, install the necessary Python libraries by executing the following command in your terminal:
 
-\```bash
+```sh
 pip install -r requirements.txt
-\```
+```
 
 
 
@@ -48,9 +48,9 @@ pip install -r requirements.txt
 
 After installing the required libraries with the command above, you can start the application by running:
 
-\```bash
+```bash
 python app.py
-\```
+```
 
 The application will start, and you should see a message indicating it's running, typically with a link to `http://127.0.0.1:5000/` or `http://localhost:5000/`. Open this link in your web browser to view the Weather Dashboard. No API key is needed to use this application, as it relies on client-side APIs for functionality.
 
