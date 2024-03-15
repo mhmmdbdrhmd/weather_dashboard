@@ -10,6 +10,7 @@
 
 
 
+
 A dynamic and interactive web application designed to provide personalized weather information based on the user's location. Leveraging client-based APIs for geolocation, mapping, and weather data retrieval, the Weather Dashboard offers a comprehensive and visually engaging overview of current weather conditions. 🌍🗺️☀️
 
 ## Client-based API Integration 🌐
